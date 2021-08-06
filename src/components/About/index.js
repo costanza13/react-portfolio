@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Header() {
+function About() {
   return (
     <div className="row">
       <div className="col-12">
-        <h1>header</h1>
+        About
       </div>
     </div>
   )
 };
 
-export default Header;
+export default About;
