@@ -2,8 +2,8 @@ import React from 'react';
 
 function About() {
   return (
-    <article id="about-me" className='article'>
-      <h2 class="section-heading">About Me</h2>
+    <section id="about-me" className='article'>
+      <h2 className="section-heading">About Me</h2>
       <p>
         I'm a full stack web application developer with a backround in Physics and Electrical Engineering. I grew up and
         went to college on the east coast, but currently reside in the San Franciso Bay Area with my family. I have
@@ -19,7 +19,7 @@ function About() {
         in math and science, participating in Tough Mudder obstacle courses and having fun with my family and my two
         mini-dachshunds, Vienna (Sausage) and Pepper(oni).
       </p>
-    </article>
+    </section>
   )
 };
 
