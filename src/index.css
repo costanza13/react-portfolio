@@ -1,13 +1,360 @@
-body {
+:root {
+  --highlight: #bfd1e5;
+  --text-color-big: #445876;
+  --text-color-normal: #445876;
+  --bgcolor-light: #ebf5ee;
+  --bgcolor-dark: #445876;
+  --font-headings: 'Averia Serif Libre', Didot;
+  --font-normal: 'Cairo', sans-serif;
+}
+/* desert sand #d8bfaa */
+/* middle red #db7f67 */
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-normal);
+  background-color: var(--background-color-light);
+  color: var(--text-color-normal);
+  max-width: 1200px;
+  margin: 0;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bgcolor-dark);
+  /* border-radius: 20px 20px 0 0; */
+  color: var(--highlight);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header h1 {
+  flex-basis: 100%;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--font-headings);
+  font-size: 40px;
+}
+
+nav {
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  flex: 1 auto;
+  border: 1px solid var(--highlight);
+  border-radius: 16px;
+  width: 100%;
+  font-family: var(--font-headings);
+  font-size: calc(10px + 0.5vw);
+  padding: 0 1vw;
+  margin: 0 1vw;
+  text-align: center;
+}
+
+nav ul li a {
+  color: #ebf5ee;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+nav ul li.selected {
+  background-color: #d8bfaa;
+}
+
+nav ul li.selected a {
+  color: #445876;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;  /* until we get some content in there */
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('./images/truckee-rocks.jpeg');
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: center -250px;
+  border-color: var(--bgcolor-dark);
+  padding: 30px 10%;
+  text-align: right;
+}
+
+.hero h2 {
+  color: var(--bgcolor-light);
+  flex: 2 60%;
+  font-size: 170%;
+  font-weight: 700;
+  padding-right: 20px;
+  text-align: right;
+  text-shadow: 1px 2px var(--bgcolor-dark);
+}
+
+.hero img {
+  border: 4px solid var(--bgcolor-dark);
+  border-radius: 16px;
+  flex: 1 40%;
+  max-width: 200px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 20px;
+}
+
+article h2 {
+  border-bottom: 1px solid var(--bgcolor-dark);
+  flex-basis: 100%;
+  font-family: var(--font-headings);
+  font-size: 36px;
+  padding: 20px;
+  text-align: center;
+}
+
+article p, #contact-info ul {
+  flex-basis: 70%;
+  padding: 20px 5px;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 70%;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+/* default layout for project screenshots */
+.project {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
+  background: #eee;
+  background-size: cover;
+  border: 4px solid var(--bgcolor-dark);
+  border-radius: 16px;
+  flex: 1 40%;
+  height: 300px;
+  margin: 5px;
+  color: var(--text-color-normal);
+  text-decoration: none;
+}
+
+/* make first project larger than the rest */
+#project1 {
+  flex: 1 100%;
+  background-image: url('./images/projects/techdirt-ss.png');
+  height: 400px;
+}
+
+#project2 {
+  background-image: url('./images/projects/cool-california.png');
+}
+
+#project3 {
+  background-image: url('./images/projects/sig-desktop.png');
+}
+
+#project4 {
+  background-image: url('./images/projects/work-day-scheduler.jpg');
+}
+
+#project5 {
+  background-image: url('./images/projects/runbuddy-ss.png');
+}
+
+.project:hover > .links-modal {
+  display: block;
+}
+
+.project-label {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--highlight);
+  opacity: 0.98;
+  border-radius: 0 0 12px 12px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.project-label a {
+  color: var(--text-color-normal);
+  text-decoration: none;
+}
+
+.project-label h3 {
+  flex: 1 60%;
+  font-size: 150%;
+  line-height: 1.5;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-label p {
+  flex: 2 40%;
+  font-size: 80%;
+  line-height: 1.2;
+  padding: 0;
+  text-align: right;
+  text-decoration: none;
+}
+
+#contact-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#contact-info ul li {
+  font-size: 22px;
+  margin: 0 5px;
+  padding: 0 10px;
+  text-align: center;
+  flex-basis: 40%
+}
+
+#contact-info ul li a {
+  color: var(--text-color-normal);
+  text-decoration: none;
+}
+
+
+footer {
+  display: block;
+  min-height: 40px;  /* until we get some content in there */
+  background-color: var(--bgcolor-dark);
+  border-radius: 0 0 20px 20px;
+  padding: 10px 20px;
+}
+
+footer p {
+  color: var(--bgcolor-light);
+  font-family: var(--font-headings);
+  font-style: italic;
+  padding: 20px;
+  text-align: right;
+}
+
+/* modify the layout for ipad-sized screens */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+  }
+
+  header h1 {
+    flex: 1 40%;
+    text-align: left;
+    padding-left: 40px;
+  }
+  
+  nav {
+    flex: 2 100%;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    flex-basis: 70%;
+    margin-bottom: 5px;
+  }
+  
+  nav ul li {
+    border: none;
+    flex: 1 100%;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+  }
+
+  article {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  article h2 {
+    border-bottom: none;
+    border-right: 1px solid var(--bgcolor-dark);
+    flex-basis: 20%;
+    font-size: calc(22px + 1vw);
+    text-align: right;
+  }
+}
+
+/* modify the layout for laptop/desktop screens */
+@media screen and (min-width: 1000px) {
+  header {
+    align-items: flex-end;
+  }
+
+  header h1 {
+    flex: 1 40%;
+    text-align: center;
+    align-self: flex-start;
+    padding-left: 10px;
+  }
+
+  nav {
+    flex: 2 50%;
+    align-content: flex-end;
+    width: 100%
+  }
+
+  nav ul {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  article h2 {
+    font-size: 38px;
+  }
+
+  #contact-info ul li {
+    border-bottom: 1px solid var(--text-color-normal);
+    flex-basis: auto;
+  }
 }

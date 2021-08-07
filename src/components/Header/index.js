@@ -1,13 +1,20 @@
 import React from 'react';
+import Navigation from '../Navigation';
 
-function Header() {
+const Header = (props) => {
+  const {
+    setCurrentSection,
+    currentSection
+  } = props;
+
   return (
-    <div className="row">
-      <div className="col-12">
-        <h1>header</h1>
-      </div>
-    </div>
-  )
+    <header>
+      <h1>
+        Michael Costanza
+      </h1>
+      <Navigation setCurrentSection={setCurrentSection} currentSection={currentSection}></Navigation>
+    </header>
+  );
 };
 
 export default Header;

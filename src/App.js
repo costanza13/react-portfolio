@@ -10,22 +10,23 @@ import './App.css';
 function App() {
   const [currentSection, setCurrentSection] = useState('about');
 
-  let mainContent;
+  let section;
   switch (currentSection) {
     case 'portfolio':
-      mainContent = <Portfolio></Portfolio>;
+      section = <Portfolio></Portfolio>;
       break;
     case 'contact':
-      mainContent = <ContactForm></ContactForm>;
+      section = <ContactForm></ContactForm>;
       break;
     case 'resume':
-      mainContent = <Resume></Resume>;
+      section = <Resume></Resume>;
       break;
     case 'about':
     default:
-      mainContent = <About></About>;
+      section = <About></About>;
       break;
   }
+
   return (
     <>
       <Header
@@ -33,8 +34,8 @@ function App() {
         setCurrentSection={setCurrentSection}>
       </Header>
       <main>
-        {mainContent}
-      </main>
+      {section}
+    </main>
       <Footer></Footer>
     </>
   );
