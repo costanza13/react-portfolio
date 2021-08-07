@@ -1,10 +1,12 @@
 import React from 'react';
+import mcc from '../../images/mcc-20200827.jpeg';
 
 function About() {
   return (
     <section id="about-me" className='article'>
       <h2 className="section-heading">About Me</h2>
       <p>
+        <img src={mcc} alt="Michael Costanza" />
         I'm a full stack web application developer with a backround in Physics and Electrical Engineering. I grew up and
         went to college on the east coast, but currently reside in the San Franciso Bay Area with my family. I have
         experience with a variety of web-related technologies, including JavaScript, PHP, Perl, JSP, Java, MySQL, HTML5

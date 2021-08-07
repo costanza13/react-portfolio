@@ -1,9 +1,9 @@
 :root {
-  --highlight: #e5b769ff;
-  --text-color-big: #777263ff;
-  --text-color-normal: #777263ff;
-  --bgcolor-light: #d5e6f9ff;
-  --bgcolor-dark: #546575ff;
+  --highlight: #f9eedc;
+  --text-color-big: #646054;
+  --text-color-normal: #646054;
+  --bgcolor-light: #edf4fc;
+  --bgcolor-dark: #546575;
   /* --font-headings: 'Averia Serif Libre', Didot;
   --font-normal: 'Cairo', sans-serif; */
   --font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,17 +14,17 @@
   sans-serif;
 }
 /* 
---independence: #445876ff;
---beau-blue: #bfd1e5ff;
---mint-cream: #ebf5eeff;
---desert-sand: #d8bfaaff;
---middle-red: #db7f67ff;
+--independence: #445876;
+--beau-blue: #bfd1e5;
+--mint-cream: #ebf5ee;
+--desert-sand: #d8bfaa;
+--middle-red: #db7f67;
 
---black-coral: #546575ff;
---beau-blue: #d5e6f9ff;
---sunray: #e5b769ff;
---white: #ffffffff;
---nickel: #777263ff;
+--alice-blue: #edf4fc;
+--beau-blue: #d5e6f9;
+--antique-white: #f9eedc;
+--white: #ffffff;
+--dim-gray: #646054;
 */
 
 * {
@@ -86,7 +86,7 @@ nav ul {
 nav ul li {
   flex: 1 auto;
   border: 1px solid var(--highlight);
-  border-radius: 16px;
+  border-radius: 8px;
   width: 100%;
   font-family: var(--font-headings);
   font-size: calc(14px + 0.5vw);
@@ -115,14 +115,16 @@ main {
   background-image: url('./images/truckee-rocks.jpeg');
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin: 0 auto;
 }
 
-.hero img {
-  border: 4px solid var(--bgcolor-dark);
+#about-me img {
+  border: 1px solid var(--bgcolor-dark);
   border-radius: 16px;
   flex: 1 40%;
+  float: right;
+  margin: 0.5rem 1rem 1rem;
   max-width: 200px;
 }
 
@@ -136,9 +138,9 @@ section {
   padding: 20px;
 }
 
-section h2 {
+.section-heading {
   border-bottom: 1px solid var(--bgcolor-dark);
-  flex-basis: 100%;
+  flex-basis: 20%;
   font-family: var(--font-headings);
   font-size: 36px;
   padding: 20px;
@@ -151,65 +153,77 @@ section p {
   padding: 20px 5px;
 }
 
-#projects {
+.section-content {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 70%;
-  justify-content: space-between;
-  padding: 20px 0;
+  flex-basis: 80%;
+  justify-content: space-around;
+  padding: 1rem 0;
 }
 
 /* default layout for project screenshots */
 .project {
+  color: var(--text-color-normal);
   display: flex;
   justify-content: stretch;
   align-items: flex-end;
   background: #eee;
   background-size: cover;
-  border: 4px solid var(--bgcolor-dark);
-  border-radius: 16px;
+  border: 2px solid var(--bgcolor-dark);
+  border-radius: 8px;
   flex: 1 40%;
   height: 300px;
-  margin: 5px;
-  color: var(--text-color-normal);
+  margin: 0.5rem 0.5vw;
+  min-width: 300px;
+  max-width: 350px;
   text-decoration: none;
 }
 
 /* make first project larger than the rest */
 #project1 {
-  flex: 1 100%;
-  background-image: url('./images/projects/techdirt-ss.png');
-  height: 400px;
+  background-image: url('./images/projects/techdirt-mobile.png');
 }
 
 #project2 {
-  background-image: url('./images/projects/cool-california.png');
+  background-image: url('./images/projects/cool-california-mobile.png');
 }
 
 #project3 {
-  background-image: url('./images/projects/sig-desktop.png');
+  background-image: url('./images/projects/should-i-go-mobile.png');
 }
 
 #project4 {
-  background-image: url('./images/projects/work-day-scheduler.jpg');
+  background-image: url('./images/projects/budget-tracker-mobile.png');
 }
 
 #project5 {
-  background-image: url('./images/projects/runbuddy-ss.png');
+  background-image: url('./images/projects/work-day-scheduler.jpg');
+}
+
+#project6 {
+  background-image: url('./images/projects/note-taker-mobile.png');
 }
 
 .project:hover > .links-modal {
   display: block;
 }
 
+.links {
+  background: var(--highlight);
+  border-radius: 0 0 10px 10px;
+  color: var(--text-color-normal);
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 30px;
+  text-align: center;
+}
+
 .project-label {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+  border-top: 1px solid var(--text-color-normal);
   background: var(--highlight);
   opacity: 0.98;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 10px 10px;
   padding: 5px 10px;
   width: 100%;
 }
@@ -323,12 +337,16 @@ footer a:hover i {
     padding: 0;
   }
 
+  main {
+    padding: 2rem;
+  }
+  
   section {
     flex-direction: row;
     align-items: stretch;
   }
 
-  section h2 {
+  .section-heading {
     border-bottom: none;
     border-right: 1px solid var(--bgcolor-dark);
     flex-basis: 20%;

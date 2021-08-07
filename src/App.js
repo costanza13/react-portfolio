@@ -8,7 +8,9 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('about');
+  const anchor = document.location.href.split('#')[1];
+  const startSection = anchor ? anchor : 'about';
+  const [currentSection, setCurrentSection] = useState(startSection);
 
   let section;
   switch (currentSection) {
