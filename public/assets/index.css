@@ -1,9 +1,9 @@
 :root {
   --highlight: #f9eedc;
-  --text-color-big: #646054;
-  --text-color-normal: #646054;
+  --text-color-big: #546575;
+  --text-color-normal: #546575;
   --bgcolor-light: #edf4fc;
-  --bgcolor-dark: #546575;
+  --bgcolor-dark: #646054;
   /* --font-headings: 'Averia Serif Libre', Didot;
   --font-normal: 'Cairo', sans-serif; */
   --font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,8 +20,8 @@
 --desert-sand: #d8bfaa;
 --middle-red: #db7f67;
 
+--black-coral: #546575;
 --alice-blue: #edf4fc;
---beau-blue: #d5e6f9;
 --antique-white: #f9eedc;
 --white: #ffffff;
 --dim-gray: #646054;
