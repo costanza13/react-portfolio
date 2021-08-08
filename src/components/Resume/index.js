@@ -1,8 +1,7 @@
 import React from 'react';
-import { Document, Page } from 'react-pdf/dist/umd/entry.webpack';
 import skills from '../../data/skills';
-// import resumePdf from `$;
-
+import resume1 from '../../images/mcc-resume-p1.png';
+import resume2 from '../../images/mcc-resume-p2.png';
 
 function Resume() {
   const frontEndItems = skills.frontEnd.map((skill, i) => {
@@ -12,7 +11,6 @@ function Resume() {
   const backEndItems = skills.backEnd.map((skill, i) => {
     return <li key={i}>{skill}</li>
   });
-
 
   return (
     <section className="resume">
@@ -33,18 +31,10 @@ function Resume() {
           </ul>
         </div>
         <div className="resume-wrap">
-          <Document file={process.env.PUBLIC_URL + '/assets/MichaelCCostanza.pdf'}>
-            <Page
-              key="page-1"
-              pageNumber={1}
-            />
-            <Page
-              key="page-2"
-              pageNumber={2}
-            />
-          </Document>
+          <img src={resume1} alt="resume page 1" />
+          <img src={resume2} alt="resume page 2" />
         </div>
-        <p className="links"><a href="https://drive.google.com/file/d/0BzTWWfPUrM0xNFEzTTZVaXZ2NlU/view?usp=sharing&amp;resourcekey=0-UMYEdQOHQLm2zakmhOexDA" target="_blank" rel="noreferrer">View/download my resumé here. <i className="fas fa-file-download"></i></a></p>
+        <p className="links"><a href="https://drive.google.com/file/d/0BzTWWfPUrM0xNFEzTTZVaXZ2NlU/view?usp=sharing&amp;resourcekey=0-UMYEdQOHQLm2zakmhOexDA" target="_blank" rel="noreferrer">Click here to view/download a PDF of my resumé. <i className="fas fa-file-download"></i></a></p>
       </div>
     </section>
   )

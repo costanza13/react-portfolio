@@ -61,7 +61,7 @@ function ContactForm() {
         </form>
         <ul className="links">
           <li>
-            Phone: <a href="tel:646-770-2622">646-708-1922</a>
+            Phone: <a href="tel:646-770-2622">646-770-2622</a>
           </li>
           <li>
             Email: <a href="mailto:costanza@gmail.com">costanza@gmail.com</a>
