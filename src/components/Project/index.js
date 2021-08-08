@@ -14,14 +14,24 @@ const Project = ({ details: p, setSpotlightProject }) => {
     spotlightEnabled = true;
   }
 
+  const githubLink = p.github ? <a href={p.github}
+    title={`View the ${p.name} GitHub repository`}
+    rel="noreferrer" target="_blank"><i className="fab fa-github"></i></a> : '';
+
   return (
     <div className={`project project${p.idx}`}>
-      <div className="screenshot" onClick={handleProjectClick}>
+      <div className="screenshot">
         <div className="expand-modal">
-          <div className="expand-button">Expand <i className="far fa-plus-square"></i></div>
+          <div className="expand-button" onClick={handleProjectClick}><i className="fas fa-info-circle fa-3x"></i><br />More Info</div>
         </div>
       </div>
       <div className="project-label">
+        <div class="project-links">
+          <a href={p.url}
+            title={`Visit ${p.name}`}
+            rel="noreferrer" target="_blank"><i className="fas fa-external-link-alt"></i></a>
+          {githubLink}
+        </div>
         <h3><a href={p.url}
           title={p.blurb}
           onMouseEnter={disableSpotlight}

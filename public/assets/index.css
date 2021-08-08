@@ -1,31 +1,17 @@
 :root {
-  --highlight: #F9F4F1;
-  --text-color-light: #edf4fc;
-  --text-color-dark: #546575;
-  --bgcolor-light: #edf4fc;
-  --bgcolor-dark: #646054;
+  --independence: #445876ff;
+  --platinum: #ebebebff;
+  --ash-gray: #cad2c5ff;
+  --forest-green-traditional: #0A3200;
+
+  --bgcolor-dark: var(--independence);
+  --text-color-light: var(--platinum);
+  --bgcolor-light: var(--platinum);
+  --highlight: var(--ash-gray);
+  --text-color-dark: var(--forest-green-traditional);
   --font-headings: 'Averia Serif Libre', Didot;
   --font-normal: 'Cairo', sans-serif;
-  /* --font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  --font-normal: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif; */
 }
-/* 
---independence: #445876;
---beau-blue: #bfd1e5;
---mint-cream: #ebf5ee;
---desert-sand: #d8bfaa;
---middle-red: #db7f67;
-
---black-coral: #546575;
---alice-blue: #edf4fc;
---beige: #eef5e0;
---white: #ffffff;
---dim-gray: #646054;
-*/
 
 * {
   box-sizing: border-box;
@@ -51,7 +37,7 @@ code {
 header {
   align-items: center;
   background-color: var(--bgcolor-dark);
-  color: #ebf5ee;
+  color: var(--text-color-light);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -181,7 +167,6 @@ section p {
 
 .project .screenshot {
   background-size: cover;
-  cursor: pointer;
   height: 300px;
   position: relative;
 }
@@ -191,8 +176,7 @@ section p {
 }
 
 .project .screenshot:hover > .expand-modal {
-  background-color: gray;
-  opacity: 70%;
+  background-color: rgba(255, 255, 255, 0.7);;
   display: block;
   width: 100%;
   height: 100%;
@@ -203,11 +187,15 @@ section p {
 }
 
 .expand-modal > .expand-button {
-  color: #000;
-  font-size: 200%;
+  /* background-color: rgba(0, 0, 0, 1);; */
+  border-radius: 8px;
+  color: rgba(83, 81, 81, 0.8);
+  cursor: pointer;
   font-weight: bold;
   left: 50%;
+  padding: 0.2rem;
   position: absolute;
+  text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -269,14 +257,23 @@ section p {
 .project-label p {
   flex: 2 40%;
   font-size: 80%;
+  font-weight: bold;
   line-height: 1.2;
-  padding: 0;
+  padding: 0.1rem;
   text-align: right;
   text-decoration: none;
 }
 
+.project-links {
+  float: right;
+}
+
+.project-links i {
+  margin-left: 0.5rem;
+}
+
 .project-spotlight {
-  background-color: var(--bgcolor-light);
+  background-color: var(--bgcolor-dark);
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
   display: flex;
@@ -307,15 +304,15 @@ section p {
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
   color: var(--text-color-dark);
-  padding: calc(0.5rem + 0.2vw);
+  padding: 0.5rem calc(0.5rem + 1vw);
   overflow-y: scroll;
 }
 
 .close-modal {
-  background-color: var(--bgcolor-light);
+  background-color: var(--bgcolor-dark);
   border-radius: 0 0 0 8px;
-  color: var(--text-color-dark);
-  padding: 0 0 0.5rem 0.5rem;
+  color: var(--highlight);
+  padding: 0 0 0.5rem 0.75rem;
   position: absolute;
   right: 0.8rem;
   text-align: right;

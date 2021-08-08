@@ -5,7 +5,7 @@ const Project = ({ details: p, setSpotlightProject }) => {
     setSpotlightProject(null);
   }
 
-  const githubLink = p.github ? <a href={p.url}
+  const githubLink = p.github ? <a href={p.github}
     title={`${p.name}: ${p.blurb}`}
     rel="noreferrer" target="_blank"> GitHub Repo <i className="fas fa-external-link-alt"></i></a> : '';
 
