@@ -1,12 +1,14 @@
 :root {
   --independence: #445876ff;
   --platinum: #ebebebff;
+  --platinum-op: rgba(235, 235, 235, 0.95);
   --ash-gray: #cad2c5ff;
   --forest-green-traditional: #0A3200;
 
   --bgcolor-dark: var(--independence);
   --text-color-light: var(--platinum);
   --bgcolor-light: var(--platinum);
+  --bgcolor-light-op: var(--platinum-op);
   --highlight: var(--ash-gray);
   --text-color-dark: var(--forest-green-traditional);
   --font-headings: 'Averia Serif Libre', Didot;
@@ -119,7 +121,7 @@ main {
 }
 
 section {
-  background-color: var(--bgcolor-light);
+  background-color: var(--bgcolor-light-op);
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
   display: flex;
@@ -372,7 +374,18 @@ ul.links {
 }
 
 .resume-wrap {
-  display: none;
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 8px;
+  display: block;
+  height: 200px;
+  margin: 0.5rem;
+  overflow-y: scroll;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+.resume-wrap img {
+  width: 100%;
 }
 
 footer {
@@ -486,12 +499,7 @@ footer a:hover i {
   }
 
   .resume-wrap {
-    border: 1px solid var(--bgcolor-dark);
-    border-radius: 8px;
-    display: block;
     height: 500px;
-    overflow-y: scroll;
-    padding: 1rem;
   }
 }
 
