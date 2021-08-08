@@ -34,8 +34,10 @@ function ContactForm() {
   }
 
   return (
-    <section id="contact">
-      <h2 className="section-heading">Contact Me</h2>
+    <section className="contact">
+      <div className="section-heading">
+        <h2>Contact Me</h2>
+      </div>
       <div className="form-wrap">
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
@@ -57,12 +59,12 @@ function ContactForm() {
           )}
           <button type="submit" data-testid="contact-submit">Submit</button>
         </form>
-        <ul>
+        <ul className="links">
           <li>
-            Phone: 646-708-1922
+            Phone: <a href="tel:646-770-2622">646-708-1922</a>
           </li>
           <li>
-            Email: michael.c.costanza@gmai.com
+            Email: <a href="mailto:costanza@gmail.com">costanza@gmail.com</a>
           </li>
         </ul>
       </div>

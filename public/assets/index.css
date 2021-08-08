@@ -1,17 +1,17 @@
 :root {
-  --highlight: #f9eedc;
-  --text-color-big: #546575;
-  --text-color-normal: #546575;
+  --highlight: #F9F4F1;
+  --text-color-light: #edf4fc;
+  --text-color-dark: #546575;
   --bgcolor-light: #edf4fc;
   --bgcolor-dark: #646054;
-  /* --font-headings: 'Averia Serif Libre', Didot;
-  --font-normal: 'Cairo', sans-serif; */
-  --font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  --font-headings: 'Averia Serif Libre', Didot;
+  --font-normal: 'Cairo', sans-serif;
+  /* --font-headings: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   --font-normal: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  sans-serif; */
 }
 /* 
 --independence: #445876;
@@ -22,7 +22,7 @@
 
 --black-coral: #546575;
 --alice-blue: #edf4fc;
---antique-white: #f9eedc;
+--beige: #eef5e0;
 --white: #ffffff;
 --dim-gray: #646054;
 */
@@ -36,7 +36,7 @@
 body {
   font-family: var(--font-normal);
   background-color: var(--bgcolor-dark);
-  color: var(--text-color-normal);
+  color: var(--text-color-dark);
   max-width: 1200px;
   margin: 0;
   -moz-osx-font-smoothing: grayscale;
@@ -119,18 +119,17 @@ main {
   margin: 0 auto;
 }
 
-#about-me img {
+.about-me img {
   border: 1px solid var(--bgcolor-dark);
   border-radius: 16px;
   flex: 1 40%;
-  float: right;
   margin: 0.5rem 1rem 1rem;
   max-width: 200px;
 }
 
 section {
   background-color: var(--bgcolor-light);
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -142,15 +141,18 @@ section {
   border-bottom: 1px solid var(--bgcolor-dark);
   flex-basis: 20%;
   font-family: var(--font-headings);
-  font-size: 36px;
-  padding: 20px;
+  justify-content: space-around;
+  padding: 1rem 1rem 0 0;
   text-align: center;
 }
 
+.section-heading h2 {
+  font-size: 36px;
+}
+
 section p {
-  flex-basis: 70%;
   list-style: none;
-  padding: 20px 5px;
+  padding: 1rem;
 }
 
 .section-content {
@@ -163,43 +165,76 @@ section p {
 
 /* default layout for project screenshots */
 .project {
-  color: var(--text-color-normal);
-  display: flex;
-  justify-content: stretch;
   align-items: flex-end;
   background: #eee;
-  background-size: cover;
-  border: 2px solid var(--bgcolor-dark);
+  border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
+  display: flex column;
   flex: 1 40%;
-  height: 300px;
+  justify-content: stretch;
   margin: 0.5rem 0.5vw;
   min-width: 300px;
   max-width: 350px;
+  overflow: hidden;
   text-decoration: none;
 }
 
+.project .screenshot {
+  background-size: cover;
+  cursor: pointer;
+  height: 300px;
+  position: relative;
+}
+
+.expand-modal {
+  display: none;
+}
+
+.project .screenshot:hover > .expand-modal {
+  background-color: gray;
+  opacity: 70%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.expand-modal > .expand-button {
+  color: #000;
+  font-size: 200%;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* make first project larger than the rest */
-.project1 { background-image: url('./images/projects/techdirt-mobile.png'); }
-.project2 { background-image: url('./images/projects/cool-california-mobile.png'); }
-.project3 { background-image: url('./images/projects/should-i-go-mobile.png'); }
-.project4 { background-image: url('./images/projects/budget-tracker-mobile.png'); }
-.project5 { background-image: url('./images/projects/work-day-scheduler.jpg'); }
-.project6 { background-image: url('./images/projects/note-taker-mobile.png'); }
+.project1 .screenshot { background-image: url('./images/projects/techdirt-mobile.png'); }
+.project2 .screenshot { background-image: url('./images/projects/cool-california-mobile.png'); }
+.project3 .screenshot { background-image: url('./images/projects/should-i-go-mobile.png'); }
+.project4 .screenshot { background-image: url('./images/projects/budget-tracker-mobile.png'); }
+.project5 .screenshot { background-image: url('./images/projects/work-day-scheduler.jpg'); }
+.project6 .screenshot { background-image: url('./images/projects/note-taker-mobile.png'); }
 
 .project1.lg { background-image: url('./images/projects/techdirt-desktop.png'); }
 .project2.lg { background-image: url('./images/projects/cool-california-desktop.png'); }
 .project3.lg { background-image: url('./images/projects/should-i-go-desktop.png'); }
 .project4.lg { background-image: url('./images/projects/budget-tracker-desktop.png'); }
 .project5.lg { background-image: url('./images/projects/work-day-scheduler-padded.png'); }
-.project6.lg { background-image: url('./images/projects/note-taker-mobile.png'); }
+.project6.lg { background-image: url('./images/projects/note-taker-desktop.png'); }
 
 .links {
-  padding: 5px 30px;
+  font-weight: bold;
+  padding: 1rem 4rem;
   text-align: center;
 }
 
 .links a {
+  color: var(--text-color-dark);
   text-decoration: none;
 }
 
@@ -207,21 +242,18 @@ section p {
   text-decoration: underline;
 }
 
-.expand-modal {
-  display: none;
-}
-
 .project-label {
-  border-top: 1px solid var(--text-color-normal);
-  background: var(--highlight);
+  border: 1px solid var(--text-color-dark);
+  background: var(--bgcolor-dark);
+  color: var(--text-color-light);
   opacity: 0.98;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 8px 8px;
   padding: 5px 10px;
   width: 100%;
 }
 
 .project-label a {
-  color: var(--text-color-normal);
+  color: var(--text-color-light);
   text-decoration: none;
 }
 
@@ -244,7 +276,7 @@ section p {
 }
 
 .project-spotlight {
-  background-color: var(--highlight);
+  background-color: var(--bgcolor-light);
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
   display: flex;
@@ -259,7 +291,7 @@ section p {
   z-index: 999;
 }
 
-.screenshot {
+.project-spotlight .screenshot {
   background-size: cover;
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
@@ -271,20 +303,22 @@ section p {
 }
 
 .project-spotlight > .project-info {
-  background-color: #fff;
+  background-color: #ffffff;
+  border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
-  padding: 0.5rem;
+  color: var(--text-color-dark);
+  padding: calc(0.5rem + 0.2vw);
   overflow-y: scroll;
 }
 
 .close-modal {
-  color: var(--text-color-normal);
-  text-align: right;
-  position: absolute;
+  background-color: var(--bgcolor-light);
   border-radius: 0 0 0 8px;
-  right: 1rem;
+  color: var(--text-color-dark);
   padding: 0 0 0.5rem 0.5rem;
-  background-color: var(--highlight);
+  position: absolute;
+  right: 0.8rem;
+  text-align: right;
 }
 
 .form-wrap {
@@ -292,7 +326,7 @@ section p {
   width: 100%;
 }
 
-.form-wrap ul {
+ul.links {
   align-items: center;
   display: flex;
   flex-basis: 100%;
@@ -313,6 +347,19 @@ section p {
 
 #contact-form input, #contact-form textarea {
   width: 100%;
+}
+
+.skills-list {
+  flex-basis: 100%;
+  margin: 1rem;
+}
+
+.skills-list ul {
+  margin: 1rem 2rem;
+}
+
+.resume-wrap {
+  display: none;
 }
 
 footer {
@@ -377,6 +424,10 @@ footer a:hover i {
     padding: 2rem;
   }
 
+  .about-me img {
+    float: right;
+  }
+
   section {
     flex-direction: row;
     align-items: stretch;
@@ -386,8 +437,17 @@ footer a:hover i {
     border-bottom: none;
     border-right: 1px solid var(--bgcolor-dark);
     flex-basis: 20%;
-    font-size: calc(22px + 1vw);
+    padding-top: 5rem;
     text-align: right;
+    width: 170px;
+  }
+
+  .section-heading h2 {
+    font-size: calc(22px + 1vw);
+  }
+
+  .project {
+    margin: 1rem 2vw;
   }
 
   .project-spotlight {
@@ -399,9 +459,26 @@ footer a:hover i {
     z-index: 999;
   }
 
-  .form-wrap ul {
+  ul.links {
     flex-basis: 70%;
     flex-direction: row;
+  }
+
+  #skills.section-content {
+    flex-basis: 100%;
+  }
+
+  .skills-list {
+    flex-basis: 40%;
+  }
+
+  .resume-wrap {
+    border: 1px solid var(--bgcolor-dark);
+    border-radius: 8px;
+    display: block;
+    height: 500px;
+    overflow-y: scroll;
+    padding: 1rem;
   }
 }
 
@@ -434,7 +511,11 @@ footer a:hover i {
   }
 
   #contact-info ul li {
-    border-bottom: 1px solid var(--text-color-normal);
+    border-bottom: 1px solid var(--text-color-dark);
     flex-basis: auto;
   }
+}
+
+.fas {
+  text-decoration: none;
 }

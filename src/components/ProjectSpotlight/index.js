@@ -19,11 +19,20 @@ const Project = ({ details: p, setSpotlightProject }) => {
       </a>
       <div className="project-info">
         <h2>{p.name}</h2>
-        <p>{p.technologies.join(' / ')}</p>
+        <h3>{p.technologies.join(' / ')}</h3>
         <p>{p.description}</p>
-        <p className="links"><a href={p.url}
-          title={`${p.name}: ${p.blurb}`}
-          rel="noreferrer" target="_blank">{p.name + ' '}<i className="fas fa-external-link-alt"></i></a>{githubLink ? ' - ' : ''}{githubLink}</p>
+        <ul className="links">
+          <li>
+            <a href={p.url}
+              title={`${p.name}: ${p.blurb}`}
+              rel="noreferrer" target="_blank">{p.name + ' '}<i className="fas fa-external-link-alt"></i></a>
+          </li>
+          {githubLink ?
+          (<li>
+            {githubLink}
+          </li> ) : ''}
+        </ul>
+
       </div>
     </div>
   );
