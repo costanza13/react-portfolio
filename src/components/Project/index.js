@@ -1,15 +1,13 @@
 import React from 'react';
 
-const Project = ({ details : p }) => {
+const Project = ({ details : p, setSpotlightProject }) => {
+  const handleProjectClick = () => {
+    setSpotlightProject(p);
+  }
+  
   return (
-    <div id={`project${p.idx}`} className="project">
-      <div className="screenshot">
-        <ul className="links">
-          <li><a href={p.url}
-            title={`${p.name}: ${p.blurb}`}
-            rel="noreferrer" target="_blank">Web <sup><i className="fas fa-external-link-alt"></i></sup></a></li>
-        </ul>
-      </div>
+    <div className={`project project${p.idx}`} onClick={handleProjectClick}>
+      <div className="expand-modal">Expand <i className="far fa-plus-square"></i></div>
       <div className="project-label">
         <h3><a href={p.url}
           title={p.blurb}
