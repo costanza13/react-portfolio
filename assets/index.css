@@ -348,8 +348,18 @@ ul.links {
   width: 80%;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input, #contact-form textarea, #contact-form button {
+  background-color: #fff;
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 4px;
+  padding: 0.4rem;
   width: 100%;
+}
+
+#contact-form button {
+  background-color: royalblue;
+  color: #fff;
+  font-size: 120%;
 }
 
 .skills-list {
