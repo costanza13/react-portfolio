@@ -26,7 +26,7 @@ const Project = ({ details: p, setSpotlightProject }) => {
         </div>
       </div>
       <div className="project-label">
-        <div class="project-links">
+        <div className="project-links">
           <a href={p.url}
             title={`Visit ${p.name}`}
             rel="noreferrer" target="_blank"><i className="fas fa-external-link-alt"></i></a>

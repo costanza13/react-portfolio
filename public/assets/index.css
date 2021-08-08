@@ -34,6 +34,11 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   align-items: center;
   background-color: var(--bgcolor-dark);
@@ -115,6 +120,7 @@ main {
 
 section {
   background-color: var(--bgcolor-light);
+  border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -274,7 +280,7 @@ section p {
 
 .project-spotlight {
   background-color: var(--bgcolor-dark);
-  border: 1px solid var(--bgcolor-dark);
+  border: 1px solid var(--text-color-dark);
   border-radius: 8px;
   display: flex;
   flex-direction: column;

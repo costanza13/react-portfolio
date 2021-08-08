@@ -11,7 +11,7 @@ const Project = ({ details: p, setSpotlightProject }) => {
 
   return (
     <div className="project-spotlight">
-      <div className="close-modal"><i class="far fa-times-circle fa-2x" onClick={handleClose}></i></div>
+      <div className="close-modal"><i className="far fa-times-circle fa-2x" onClick={handleClose}></i></div>
       <a href={p.url}
         title={p.blurb}
         rel="noreferrer" target="_blank">

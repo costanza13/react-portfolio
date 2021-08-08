@@ -1,7 +1,7 @@
 import React from 'react';
 import { Document, Page } from 'react-pdf/dist/umd/entry.webpack';
 import skills from '../../data/skills';
-import resumePdf from './MichaelCCostanza.pdf';
+// import resumePdf from `$;
 
 
 function Resume() {
@@ -33,7 +33,7 @@ function Resume() {
           </ul>
         </div>
         <div className="resume-wrap">
-          <Document file={resumePdf}>
+          <Document file={process.env.PUBLIC_URL + '/assets/MichaelCCostanza.pdf'}>
             <Page
               key="page-1"
               pageNumber={1}

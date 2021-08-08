@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
     <header>
       <h1>
-        Michael Costanza
+        <a href="/">Michael Costanza</a>
       </h1>
       <Navigation setCurrentSection={setCurrentSection} currentSection={currentSection}></Navigation>
     </header>
