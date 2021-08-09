@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 
-function ContactForm() {
+const ContactForm = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-  const { name, email, message } = formState;
+  let { name, email, message } = formState;
   const [errorMessage, setErrorMessage] = useState('');
 
   function handleChange(e) {
@@ -26,12 +26,14 @@ function ContactForm() {
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
-  }
+  };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formState);
-  }
+    setFormState({ name: '', email: '', message: '' });
+    e.target.reset();
+  };
 
   return (
     <section className="contact">
