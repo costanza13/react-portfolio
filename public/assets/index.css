@@ -227,6 +227,10 @@ section p {
 .project5.lg { background-image: url('./images/projects/work-day-scheduler-padded.png'); }
 .project6.lg { background-image: url('./images/projects/note-taker-desktop.png'); }
 
+.project4.lg, .project5.lg {
+  background-position-x: center;
+}
+
 .links {
   font-weight: bold;
   padding: 1rem 4rem;
