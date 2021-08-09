@@ -364,6 +364,12 @@ ul.links {
   font-size: 120%;
 }
 
+p.error-text {
+  padding: 0;
+  text-align: center;
+  color: red;
+}
+
 .skills-list {
   flex-basis: 100%;
   margin: 1rem;

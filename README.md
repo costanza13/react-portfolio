@@ -1,60 +1,17 @@
-# react-portfolio
+# Michael Costanza's Portfolio
 
-## User Story
+A bit of background, some samples of my work, and contact information, presented as a single-page application, built using React.
 
-AS AN employer looking for candidates with experience building single-page applications<br>
-I WANT to view a potential employee's deployed React portfolio of work samples<br>
-SO THAT I can assess whether they're a good candidate for an open position<br>
+## Features/Functionality
 
-## Acceptance Criteria
-GIVEN a single-page application portfolio for a web developer
-- WHEN I load the portfolio<br>
-THEN I am presented with a page containing a header, a section for content, and a footer
-- WHEN I view the header<br>
-THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
-- WHEN I view the navigation titles<br>
-THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
-- WHEN I click on a navigation title<br>
-THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted
-- WHEN I load the portfolio the first time<br>
-THEN the About Me title and section are selected by default
-- WHEN I am presented with the About Me section<br>
-THEN I see a recent photo or avatar of the developer and a short bio about them
-- WHEN I am presented with the Portfolio section<br>
-THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository
-- WHEN I am presented with the Contact section<br>
-THEN I see a contact form with fields for a name, an email address, and a message
-- WHEN I move my cursor out of one of the form fields without entering text<br>
-THEN I receive a notification that this field is required
-- WHEN I enter text into the email address field<br>
-THEN I receive a notification if I have entered an invalid email address
-- WHEN I am presented with the Resume section<br>
-THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
-- WHEN I view the footer<br>
-THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
+- The portfolio loads in the "About" view, and presents 4 navigation links in the header to switch between the About, Portfolio, Contact and Resumé views. Clicking these links loads the view, and appends the corresponding anchor to the URL (e.g., "#portfolio") -- the page is not fetched from the server. The name in the header is a link to the root URI and can be used to reload the app.
 
+- The footer displays icons that link to my LinkedIn, GitHub and Facebook profiles.
 
+- The Portfolio view presents an overview of a selection of projects I've worked on, each project component including a screenshot, links to the deployed app and associated GitHub repository (where apporpriate), and a list of some of the technologies used on the project. Mousing over the screenshot (or tapping on it on mobile) will reveal a control to view more information on the project -- called the ProjectSpotlight.
 
-### NOTE
-The contact form should be similar to the one you built in the module project. Because this application doesn’t include a back end or connect to an API, you can set up this functionality the same way you did in the module project and add in back-end functionality after you’ve covered it in the next few weeks.
+- Contact link opens the contact form view (currently not hooked up). Visitors can use the form or the links below it to reach me. The contact form includes some input validation and displays an error message if any of the form fields are not completed correctly.
 
-In the meantime, consider adding your email address and phone number on the Contact page.
+- The Resumé view show a list of my skills and proficiencies, along with an embedded copy of my resumé and a link to view or download a PDF copy. *Note: I attempted to embed my PDF resumé using `react-pdf`, but I was unable to get it to work in the built version of the page. For now, I've included images instead.
 
-### Projects
-For each project you feature in your portfolio, you should include the following:
-
-- An image of the deployed application (either a GIF or a screenshot)
-- The title of the project
-- A link to the deployed application
-- A link to the corresponding GitHub repository
-
-#### Design
-As with the previous portfolio homework, remember that "good" design is subjective; however, your site should look polished. Here are a few guidelines on what that means:
-
-- Use mobile-first design.
-
-- Choose a color palette so that your site doesn't just look like the default Bootstrap theme or an unstyled HTML site. Look into resources like Coolors (Links to an external site.) or another color scheme generator to help you create something that will stand out.
-
-- Make sure the font size is large enough to read and that the colors don't cause eye strain.
-
-- Consider using animations and React component libraries. Note that this will not affect your grade, but it may impact how potential employers gauge your knowledge.
+![Michael Costanza's Portfoliio](public/assets/images/portfolio-ss.png)
