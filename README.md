@@ -2,6 +2,8 @@
 
 A bit of background, some samples of my work, and contact information, presented as a single-page application, built using React.
 
+[See the portfolio >>](https://costanza13.github.io/react-portfolio/)
+
 ## Features/Functionality
 
 - The portfolio loads in the "About" view, and presents 4 navigation links in the header to switch between the About, Portfolio, Contact and Resumé views. Clicking these links loads the view, and appends the corresponding anchor to the URL (e.g., "#portfolio") -- the page is not fetched from the server. The name in the header is a link to the root URI and can be used to reload the app.
