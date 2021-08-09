@@ -8,8 +8,8 @@ function About() {
         <h2>About&nbsp;Me</h2>
       </div>
       <div>
+        <div className="profile-photo"><img src={mcc} alt="Michael Costanza" /></div>
         <p>
-          <img src={mcc} alt="Michael Costanza" />
           I'm a full stack web application developer with a backround in Physics and Electrical Engineering. I grew up and
           went to college on the east coast, but currently reside in the San Franciso Bay Area with my family. I have
           experience with a variety of web-related technologies, including JavaScript, PHP, Perl, JSP, Java, MySQL, HTML5
