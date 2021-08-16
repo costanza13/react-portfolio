@@ -542,8 +542,8 @@ footer a:hover i {
     margin: 0;
   }
 
-  section h2 {
-    font-size: 38px;
+  .section-heading h2 {
+    font-size: 32px;
   }
 
   #contact-info ul li {
