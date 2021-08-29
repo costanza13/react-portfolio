@@ -171,9 +171,10 @@ section p {
   justify-content: stretch;
   margin: 0.5rem 0.5vw;
   min-width: 300px;
-  max-width: 90%;
+  max-width: 385px;
   overflow: hidden;
   text-decoration: none;
+  width: 90%;
 }
 
 .project .screenshot {
