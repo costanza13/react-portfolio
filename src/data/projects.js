@@ -60,18 +60,6 @@ export const projects = [
     ]
   },
   {
-    name: 'Work Day Scheduler',
-    url: 'https://costanza13.github.io/work-day-scheduler/',
-    github: 'https://github.com/costanza13/work-day-scheduler/',
-    blurb: 'Plan your day, the jQuery Way!',
-    description: 'Work Day Scheduler is a simple web application for keeping track of the day\'s tasks. It was built primarily to demonstrate the handiness of jQuery and Bootstrap CSS to quickly prototype a useful app. The app takes advantage of the browser\'s local storage to persist schedule data across visits. Day.js is used to format dates and times, and JavaScript\'s setInterval() function is used to update the status throughout the day.',
-    technologies: [
-      'JavaScript',
-      'jQuery',
-      'Bootstrap'
-    ]
-  },
-  {
     name: 'Note Taker',
     url: 'https://note-taker-12hundred.herokuapp.com/',
     github: 'https://github.com/costanza13/note-taker',
