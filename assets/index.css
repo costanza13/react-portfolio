@@ -167,12 +167,11 @@ section p {
   background: #eee;
   border: 1px solid var(--bgcolor-dark);
   border-radius: 8px;
-  display: flex column;
   flex: 1 40%;
   justify-content: stretch;
   margin: 0.5rem 0.5vw;
   min-width: 300px;
-  max-width: 350px;
+  max-width: 90%;
   overflow: hidden;
   text-decoration: none;
 }
