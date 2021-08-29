@@ -212,22 +212,21 @@ section p {
   transform: translate(-50%, -50%);
 }
 
-/* make first project larger than the rest */
-.project1 .screenshot { background-image: url('./images/projects/techdirt-mobile.png'); }
-.project2 .screenshot { background-image: url('./images/projects/cool-california-mobile.png'); }
-.project3 .screenshot { background-image: url('./images/projects/should-i-go-mobile.png'); }
-.project4 .screenshot { background-image: url('./images/projects/budget-tracker-mobile.png'); }
-.project5 .screenshot { background-image: url('./images/projects/work-day-scheduler.jpg'); }
+.project1 .screenshot { background-image: url('./images/projects/kara-ok-corral-mobile.png'); }
+.project2 .screenshot { background-image: url('./images/projects/techdirt-mobile.png'); }
+.project3 .screenshot { background-image: url('./images/projects/cool-california-mobile.png'); }
+.project4 .screenshot { background-image: url('./images/projects/should-i-go-mobile.png'); }
+.project5 .screenshot { background-image: url('./images/projects/budget-tracker-mobile.png'); }
 .project6 .screenshot { background-image: url('./images/projects/note-taker-mobile.png'); }
 
-.project1.lg { background-image: url('./images/projects/techdirt-desktop.png'); }
-.project2.lg { background-image: url('./images/projects/cool-california-desktop.png'); }
-.project3.lg { background-image: url('./images/projects/should-i-go-desktop.png'); }
-.project4.lg { background-image: url('./images/projects/budget-tracker-desktop.png'); }
-.project5.lg { background-image: url('./images/projects/work-day-scheduler-padded.png'); }
+.project1.lg { background-image: url('./images/projects/kara-ok-corral-desktop.png'); }
+.project2.lg { background-image: url('./images/projects/techdirt-desktop.png'); }
+.project3.lg { background-image: url('./images/projects/cool-california-desktop.png'); }
+.project4.lg { background-image: url('./images/projects/should-i-go-desktop.png'); }
+.project5.lg { background-image: url('./images/projects/budget-tracker-desktop.png'); }
 .project6.lg { background-image: url('./images/projects/note-taker-desktop.png'); }
 
-.project4.lg, .project5.lg {
+.project5.lg {
   background-position-x: center;
 }
 
@@ -311,7 +310,7 @@ section p {
   clear: both;
   display: block;
   height: 300px;
-  margin: 1rem auto;
+  margin: 0 auto 1rem;
   max-width: 100%;
 }
 
