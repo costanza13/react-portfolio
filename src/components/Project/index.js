@@ -27,6 +27,7 @@ const Project = ({ details: p, setSpotlightProject }) => {
       </div>
       <div className="project-label">
         <div className="project-links">
+          <i className="fas fa-info-circle fa" onClick={handleProjectClick}></i>
           <a href={p.url}
             title={`Visit ${p.name}`}
             rel="noreferrer" target="_blank"><i className="fas fa-external-link-alt"></i></a>

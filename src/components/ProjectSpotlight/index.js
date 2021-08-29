@@ -1,9 +1,21 @@
 import React from 'react';
 
 const Project = ({ details: p, setSpotlightProject }) => {
-  const handleClose = (event) => {
-    setSpotlightProject(null);
-  }
+  React.useEffect(() => {
+    const handleClick = (e) => {
+      // check if the click was inside the project spotlight
+      const bubble = e.target.closest('.project-spotlight');
+      if (!bubble) {
+        setSpotlightProject(null);
+      }
+    }
+    window.addEventListener('click', handleClick);
+
+    // cleanup this component
+    return () => {
+      window.removeEventListener('click', handleClick);
+    };
+  }, [setSpotlightProject]);
 
   const githubLink = p.github ? <a href={p.github}
     title={`${p.name}: ${p.blurb}`}
@@ -11,7 +23,7 @@ const Project = ({ details: p, setSpotlightProject }) => {
 
   return (
     <div className="project-spotlight">
-      <div className="close-modal"><i className="far fa-times-circle fa-2x" onClick={handleClose}></i></div>
+      <div className="close-modal"><i className="far fa-times-circle fa-2x" onClick={() => setSpotlightProject(null)}></i></div>
       <a href={p.url}
         title={p.blurb}
         rel="noreferrer" target="_blank">
@@ -28,9 +40,9 @@ const Project = ({ details: p, setSpotlightProject }) => {
               rel="noreferrer" target="_blank">{p.name + ' '}<i className="fas fa-external-link-alt"></i></a>
           </li>
           {githubLink ?
-          (<li>
-            {githubLink}
-          </li> ) : ''}
+            (<li>
+              {githubLink}
+            </li>) : ''}
         </ul>
 
       </div>

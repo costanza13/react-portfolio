@@ -1,5 +1,16 @@
 export const projects = [
   {
+    name: 'The Kara-OK Corral',
+    url: 'https://the-kara-ok-corral.herokuapp.com',
+    github: 'https://github.com/costanza13/kara-ok-corral',
+    blurb: 'Be prepared for your next karaoke showdown with your posse.',
+    description: 'The Kara-OK Corral is a web application, built on the MERN stack, that gives users the ability to buiild playlists, link to lyrics, karaoke videos and their own performance videos, and to share and interact with their karaoke friends. The front end uses React and Apollo Client, for interfacing with a GraphQL API, which is powered by Node, Express and Apollo Server. The server uses Mongoose for MongoDB object modeling, and JSON Web Tokens for authentication.',
+    technologies: [
+      'MERN Stack',
+      'GraphQL'
+    ]
+  },
+  {
     name: 'Techdirt',
     url: 'https://www.techdirt.com',
     github: '',

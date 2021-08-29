@@ -36,9 +36,9 @@ function App() {
         setCurrentSection={setCurrentSection}>
       </Header>
       <main>
-      {section}
-    </main>
-      <Footer></Footer>
+        {section}
+      </main>
+      <Footer />
     </>
   );
 }
