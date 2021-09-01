@@ -38,7 +38,7 @@ function App() {
       <main>
         {section}
       </main>
-      <Footer />
+      <Footer></Footer>
     </>
   );
 }
