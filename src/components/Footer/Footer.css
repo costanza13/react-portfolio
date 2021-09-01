@@ -1,0 +1,27 @@
+footer {
+  display: block;
+  min-height: 40px;  /* until we get some content in there */
+  background-color: var(--bgcolor-dark);
+  /* border-radius: 0 0 20px 20px; */
+  padding: 10px 20px;
+}
+
+footer p {
+  color: var(--bgcolor-light);
+  font-family: var(--font-headings);
+  font-style: italic;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer a i {
+  color: #bfd1e5;
+  padding: 0.5rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+footer a:hover i {
+  font-size: 2.5rem;
+  padding: 0.25rem;
+}

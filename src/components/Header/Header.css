@@ -1,0 +1,41 @@
+header {
+  align-items: center;
+  background-color: var(--bgcolor-dark);
+  color: var(--text-color-light);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+header h1 {
+  flex-basis: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-headings);
+  font-size: 40px;
+}
+
+/* modify the layout for ipad-sized screens */
+@media screen and (min-width: 768px) {
+  header h1 {
+    flex: 1 40%;
+    text-align: left;
+    padding-left: 40px;
+  }
+}
+
+/* modify the layout for laptop/desktop screens */
+@media screen and (min-width: 1000px) {
+  header {
+    align-items: flex-end;
+  }
+
+  header h1 {
+    flex: 1 40%;
+    text-align: center;
+    align-self: flex-start;
+    padding-left: 10px;
+  }
+}

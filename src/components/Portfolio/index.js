@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project from '../Project';
 import ProjectSpotlight from '../ProjectSpotlight';
-import { projects } from '../../data/projects';
+import projects from '../../data/projects.json';
 
 function Portfolio() {
   const [spotlightProject, setSpotlightProject] = useState();

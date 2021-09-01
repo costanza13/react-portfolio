@@ -1,7 +1,6 @@
 import React from 'react';
 import skills from '../../data/skills';
-import resume1 from '../../images/mcc-resume-p1.png';
-import resume2 from '../../images/mcc-resume-p2.png';
+import './Resume.css';
 
 function Resume() {
   const frontEndItems = skills.frontEnd.map((skill, i) => {
@@ -31,8 +30,7 @@ function Resume() {
           </ul>
         </div>
         <div className="resume-wrap">
-          <img src={resume1} alt="resume page 1" />
-          <img src={resume2} alt="resume page 2" />
+          <iframe title="Michael C Costanza's Resumé" src='/react-portfolio/assets/MichaelCCostanza.pdf' width='100%' height='100%'></iframe>
         </div>
         <p className="links"><a href="https://drive.google.com/file/d/0BzTWWfPUrM0xNFEzTTZVaXZ2NlU/view?usp=sharing&amp;resourcekey=0-UMYEdQOHQLm2zakmhOexDA" target="_blank" rel="noreferrer">Click here to view/download a PDF of my resumé. <i className="fas fa-file-download"></i></a></p>
       </div>

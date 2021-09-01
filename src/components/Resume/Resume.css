@@ -1,0 +1,39 @@
+.skills-list {
+  flex-basis: 100%;
+  margin: 1rem;
+}
+
+.skills-list ul {
+  margin: 1rem 2rem;
+}
+
+.resume-wrap {
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 8px;
+  display: block;
+  height: 500px;
+  margin: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+.resume-wrap img {
+  width: 100%;
+}
+
+/* modify the layout for ipad-sized screens */
+@media screen and (min-width: 768px) {
+  #skills.section-content {
+    flex-basis: 100%;
+  }
+
+  .skills-list {
+    flex-basis: 40%;
+  }
+
+  .resume-wrap {
+    height: 500px;
+  }
+}
