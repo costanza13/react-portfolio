@@ -5,10 +5,10 @@
   --ash-gray: #cad2c5ff;
   --forest-green-traditional: #0A3200;
 
-  --bgcolor-dark: var(--independence);
+  --bgcolor-dark: #0a2f67;
   --text-color-light: var(--platinum);
   --bgcolor-light: var(--platinum);
-  --bgcolor-light-op: var(--platinum-op);
+  --bgcolor-light-op: rgb(249 252 255 / 95%);
   --highlight: var(--ash-gray);
   --text-color-dark: var(--forest-green-traditional);
   --font-headings: 'Averia Serif Libre', Didot;
@@ -41,69 +41,6 @@ a {
   color: inherit;
 }
 
-header {
-  align-items: center;
-  background-color: var(--bgcolor-dark);
-  color: var(--text-color-light);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0.5rem;
-  width: 100%;
-}
-
-header h1 {
-  flex-basis: 100%;
-  padding: 1.5rem;
-  text-align: center;
-  font-family: var(--font-headings);
-  font-size: 40px;
-}
-
-nav {
-  display: flex;
-  flex-basis: 100%;
-  width: 100%;
-  align-items: flex-end;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-
-nav ul li {
-  flex: 1 auto;
-  border: 1px solid var(--highlight);
-  border-radius: 8px;
-  width: 100%;
-  font-family: var(--font-headings);
-  font-size: calc(14px + 0.5vw);
-  font-weight: bold;
-  padding: 1vw;
-  margin: 0 1vw;
-  text-align: center;
-}
-
-nav ul li a {
-  color: #bfd1e5;
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
-}
-
-nav ul li.selected {
-  background-color: #bfd1e5;
-}
-
-nav ul li.selected a {
-  color: #445876;
-}
-
 main {
   background-image: url('./images/truckee-rocks.jpeg');
   display: flex;
@@ -126,8 +63,8 @@ main {
 
 section {
   background-color: var(--bgcolor-light-op);
-  border: 1px solid var(--bgcolor-dark);
-  border-radius: 8px;
+  /* border: 1px solid var(--bgcolor-dark); */
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -139,13 +76,15 @@ section {
   border-bottom: 1px solid var(--bgcolor-dark);
   flex-basis: 20%;
   font-family: var(--font-headings);
+  font-size: calc(22px + 1vw);
   justify-content: space-around;
   padding: 1rem 1rem 0 0;
   text-align: center;
+  width: 100%;
 }
 
 .section-heading h2 {
-  font-size: 36px;
+  font-size: calc(22px + 1vw);
 }
 
 section p {
@@ -349,114 +288,20 @@ ul.links {
   padding: 5px;
 }
 
-#contact-form {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: left;
-  width: 80%;
-}
-
-#contact-form input, #contact-form textarea, #contact-form button {
-  background-color: #fff;
-  border: 1px solid var(--bgcolor-dark);
-  border-radius: 4px;
-  padding: 0.4rem;
-  width: 100%;
-}
-
-#contact-form button {
-  background-color: royalblue;
-  color: #fff;
-  font-size: 120%;
-}
-
 p.error-text {
   padding: 0;
   text-align: center;
   color: red;
 }
 
-.skills-list {
-  flex-basis: 100%;
-  margin: 1rem;
-}
-
-.skills-list ul {
-  margin: 1rem 2rem;
-}
-
-.resume-wrap {
-  border: 1px solid var(--bgcolor-dark);
-  border-radius: 8px;
-  display: block;
-  height: 200px;
-  margin: 0.5rem;
-  overflow-y: scroll;
-  padding: 0.5rem;
-  width: 90%;
-}
-
-.resume-wrap img {
-  width: 100%;
-}
-
-footer {
-  display: block;
-  min-height: 40px;  /* until we get some content in there */
-  background-color: var(--bgcolor-dark);
-  /* border-radius: 0 0 20px 20px; */
-  padding: 10px 20px;
-}
-
-footer p {
-  color: var(--bgcolor-light);
-  font-family: var(--font-headings);
-  font-style: italic;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-footer a i {
-  color: #bfd1e5;
-  padding: 0.5rem;
+.fas {
   text-decoration: none;
-  vertical-align: middle;
-}
-
-footer a:hover i {
-  font-size: 2.5rem;
-  padding: 0.25rem;
 }
 
 /* modify the layout for ipad-sized screens */
 @media screen and (min-width: 768px) {
   body {
     margin: 0 auto;
-  }
-
-  header h1 {
-    flex: 1 40%;
-    text-align: left;
-    padding-left: 40px;
-  }
-  
-  nav {
-    flex: 2 100%;
-    justify-content: flex-end;
-  }
-
-  nav ul {
-    flex-basis: 70%;
-    margin-bottom: 5px;
-  }
-  
-  nav ul li {
-    border: none;
-    flex: 1 100%;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
   }
 
   main {
@@ -477,13 +322,16 @@ footer a:hover i {
     border-bottom: none;
     border-right: 1px solid var(--bgcolor-dark);
     flex-basis: 20%;
+    font-size: 36px;
     padding-top: 5rem;
     text-align: right;
-    width: 170px;
+    min-width: 6em;
+    max-width: 6em;
+    width: 20%;
   }
 
   .section-heading h2 {
-    font-size: calc(22px + 1vw);
+    font-size: 36px;
   }
 
   .project {
@@ -503,54 +351,17 @@ footer a:hover i {
     flex-basis: 70%;
     flex-direction: row;
   }
-
-  #skills.section-content {
-    flex-basis: 100%;
-  }
-
-  .skills-list {
-    flex-basis: 40%;
-  }
-
-  .resume-wrap {
-    height: 500px;
-  }
 }
 
 /* modify the layout for laptop/desktop screens */
 @media screen and (min-width: 1000px) {
-  header {
-    align-items: flex-end;
-  }
-
-  header h1 {
-    flex: 1 40%;
-    text-align: center;
-    align-self: flex-start;
-    padding-left: 10px;
-  }
-
-  nav {
-    flex: 2 50%;
-    align-content: flex-end;
-    width: 100%
-  }
-
-  nav ul {
-    flex-basis: 100%;
-    margin: 0;
-  }
-
   .section-heading h2 {
     font-size: 32px;
   }
-
-  #contact-info ul li {
-    border-bottom: 1px solid var(--text-color-dark);
-    flex-basis: auto;
-  }
 }
 
-.fas {
-  text-decoration: none;
+@media screen and (min-width: 1200px) {
+  main {
+    border-radius: 5px;
+  }
 }
