@@ -32,7 +32,7 @@ function Resume() {
         <div className="resume-wrap">
           <embed title={`Michael C Costanza's Resumé`} src="/react-portfolio/assets/MichaelCCostanza.pdf#toolbar=0&amp;statusbar=0&amp;navpanes=0" type="application/pdf" width="100%" height="100%" />
         </div>
-        <p className="links"><a href="https://drive.google.com/file/d/0BzTWWfPUrM0xNFEzTTZVaXZ2NlU/view?usp=sharing&amp;resourcekey=0-UMYEdQOHQLm2zakmhOexDA" target="_blank" rel="noreferrer">Click here to view/download a PDF of my resumé. <i className="fas fa-file-download"></i></a></p>
+        <p className="links"><a href="/react-portfolio/assets/MichaelCCostanza.pdf" target="_blank" rel="noreferrer">Click here to view/download a PDF of my resumé. <i className="fas fa-file-download"></i></a></p>
       </div>
     </section>
   )
