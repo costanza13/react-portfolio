@@ -42,7 +42,7 @@ a {
 }
 
 main {
-  background-image: url('./images/truckee-rocks.jpeg');
+  background-image: url('./images/truckee-boardwalk.jpeg');
   display: flex;
   flex-direction: column;
   padding: 1rem;
